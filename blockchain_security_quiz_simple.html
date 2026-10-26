@@ -1,0 +1,349 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BLOCKCHAIN // Security Quiz</title><style>
+:root{--bg:#080b16;--panel:#11172a;--text:#f3f6ff;--muted:#a3aecb;--lime:#c7ff4f;--cyan:#53e8ff;--pink:#ff5fba;--line:#293451;--good:#4cf0a2;--bad:#ff647c}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#19234a,transparent 36%),radial-gradient(ellipse at 90% 25%,#24153d,transparent 32%),var(--bg);color:var(--text);font:16px Inter,system-ui,Segoe UI,Arial;min-height:100vh}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#6b7ba3 1px,transparent 1px),linear-gradient(90deg,#6b7ba3 1px,transparent 1px);background-size:48px 48px}.shell{width:min(1100px,calc(100% - 32px));margin:auto;position:relative}.top{display:flex;justify-content:space-between;align-items:center;padding:23px 0;border-bottom:1px solid #ffffff18}.brand{font-weight:900;letter-spacing:.14em;font-size:13px}.brand i{font-style:normal;color:var(--lime);font-size:22px;margin-right:12px}.status{color:var(--cyan);font-size:11px;letter-spacing:.14em}.hero{padding:55px 0 30px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.eyebrow{color:var(--lime);font-size:11px;letter-spacing:.2em;font-weight:900}.hero h1{font-size:clamp(40px,6vw,70px);line-height:.98;letter-spacing:-.055em;margin:18px 0}.hero h1 span{color:var(--cyan);text-shadow:0 0 30px #53e8ff40}.hero p,.sub{color:var(--muted);line-height:1.7}.hero p{font-size:17px;max-width:640px}.orbwrap{display:grid;place-items:center;min-height:230px;position:relative}.orb{width:180px;height:180px;border:1px solid #53e8ff99;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 18px #53e8ff0c,0 0 0 42px #9a83ff0b,0 0 60px #53e8ff28;animation:float 5s ease-in-out infinite}.orb b{display:grid;place-items:center;width:110px;height:110px;border:1px solid var(--lime);color:var(--lime);font-size:46px;transform:rotate(45deg);background:#0b1020}.orb b span{transform:rotate(-45deg)}.orbit{position:absolute;width:250px;height:85px;border:1px solid #ff5fba88;border-radius:50%;transform:rotate(-28deg)}.orbit.two{transform:rotate(62deg);border-color:#c7ff4f88;width:220px}@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}.stat,.panel{background:linear-gradient(145deg,#141b30f2,#0e1324f2);border:1px solid #ffffff19;border-radius:17px}.stat{padding:16px}.stat b{display:block;color:var(--lime);font-size:24px}.stat span{font-size:12px;color:var(--muted)}.panel{padding:26px;box-shadow:0 24px 80px #0003}.title{font-size:22px;margin:0 0 8px}.sub{font-size:14px;margin:0 0 22px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.field label{display:block;font-size:11px;letter-spacing:.1em;font-weight:900;margin:15px 0 10px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip,.secondary{border:1px solid var(--line);background:#0d1325;color:var(--muted);border-radius:999px;padding:10px 13px;font-size:13px}.chip.active,.chip:hover{border-color:var(--cyan);color:white;background:#53e8ff12}.select{width:100%;padding:13px;background:#0b1121;color:white;border:1px solid var(--line);border-radius:12px}.primary{border:0;border-radius:12px;padding:15px 21px;background:var(--lime);color:#11170a;font-weight:900;cursor:pointer;transition:.2s}.primary:hover{transform:translateY(-2px);box-shadow:0 0 30px #c7ff4f44}.secondary{border-radius:12px;color:white;cursor:pointer;font-weight:700}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;align-items:center}.muted{color:var(--muted);font-size:13px}.hidden{display:none!important}.quiz{margin:28px 0 60px}.qtop{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--cyan);font-size:12px;font-weight:800}.progress{height:6px;background:#252d45;border-radius:9px;overflow:hidden;margin-bottom:20px}.progress div{height:100%;background:linear-gradient(90deg,var(--cyan),var(--lime));width:0;transition:width .3s}.question{font-size:clamp(22px,3vw,34px);line-height:1.2;letter-spacing:-.03em;margin:15px 0 24px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answer{display:flex;gap:13px;align-items:center;text-align:left;width:100%;padding:16px;border:1px solid var(--line);border-radius:14px;background:#0c1222;color:white;min-height:72px;cursor:pointer;transition:.2s}.answer:hover:not(:disabled){border-color:var(--cyan);transform:translateY(-2px)}.letter{width:32px;height:32px;flex:0 0 32px;border-radius:9px;display:grid;place-items:center;background:#1b2540;color:var(--cyan);font-weight:900}.answer.correct{border-color:var(--good);background:#4cf0a210}.answer.correct .letter{background:var(--good);color:#062012}.answer.wrong{border-color:var(--bad);background:#ff647c10}.answer:disabled{cursor:default}.feedback{padding:16px;border-radius:12px;margin-top:16px;line-height:1.6;background:#151d34;border:1px solid var(--line)}.feedback.good{border-color:#4cf0a270}.feedback.bad{border-color:#ff647c70}.qbottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px}.result{text-align:center;padding:35px 15px}.ring{width:145px;height:145px;margin:22px auto;border:5px solid var(--lime);border-radius:50%;display:grid;place-items:center;box-shadow:0 0 38px #c7ff4f20}.ring b{font-size:38px}.review{max-width:760px;margin:25px auto;text-align:left}.review-item{padding:16px;border-bottom:1px solid var(--line)}.review-item b{display:block;margin-bottom:7px}.review-item span{font-size:13px;color:var(--muted)}footer{padding:24px 0 35px;border-top:1px solid #ffffff18;color:#7884a4;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.pink{color:var(--pink)}@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:38px}.orbwrap{order:-1;min-height:185px}.orb{width:145px;height:145px}.orb b{width:90px;height:90px;font-size:36px}.orbit{width:200px}.grid,.answers{grid-template-columns:1fr}.panel{padding:19px}.qtop,.qbottom{align-items:flex-start;flex-direction:column}.stats{gap:7px}.stat{padding:12px}.stat b{font-size:20px}}
+</style></head><body><div class="shell"><header class="top"><div class="brand"><i>⌬</i> BLOCKCHAIN<br><span style="font-size:10px;color:var(--muted);letter-spacing:.1em">SECURITY LAB / QUIZ</span></div><div class="status">● SYSTEM ONLINE</div></header><section class="hero"><div><div class="eyebrow">KNOWLEDGE PROTOCOL // 001</div><h1>Взломай свои<br><span>границы знаний.</span></h1><p>Общий тест по безопасности блокчейна: аудит смарт-контрактов, DeFi, TON, TAC Bridge, криптокошельки и квантово-устойчивая криптография.</p><div class="stats"><div class="stat"><b>25</b><span>вопросов в тесте</span></div><div class="stat"><b>30 сек</b><span>на каждый ответ</span></div><div class="stat"><b>1</b><span>общий тест</span></div></div></div><div class="orbwrap"><div class="orbit"></div><div class="orbit two"></div><div class="orb"><b><span>⌬</span></b></div></div></section>
+<section id="setup" class="panel">
+<h2 class="title">Готов к испытанию?</h2>
+<p class="sub">Один общий тест по всей презентации. 25 случайных вопросов, 30 секунд на каждый ответ. После ответа или окончания времени автоматически появится следующий вопрос.</p>
+<div class="stats">
+  <div class="stat"><b>25</b><span>вопросов</span></div>
+  <div class="stat"><b>30 сек</b><span>на каждый ответ</span></div>
+  <div class="stat"><b>1</b><span>общий тест</span></div>
+</div>
+<div class="actions"><button class="primary" id="start">▶ Начать тест</button><span class="muted">Без регистрации · Работает в браузере</span></div>
+</section>
+<section id="quiz" class="quiz hidden"><div class="qtop"><div><div class="eyebrow" id="qnum">ВОПРОС 01 / 25</div><div class="muted" id="categoryName">Аудит смарт-контрактов</div></div><div style="display:flex;gap:9px;flex-wrap:wrap"><span class="pill" id="scorePill">СЧЁТ: 0</span><span class="pill" id="timerPill">∞</span></div></div><div class="progress"><div id="progressBar"></div></div><div class="panel"><div class="eyebrow" id="difficulty">SECURITY CHECK</div><h2 class="question" id="question"></h2><div class="answers" id="answers"></div><div id="feedback" class="feedback hidden"></div><div class="qbottom"><span class="muted" id="hint">Выбери один правильный вариант.</span><div class="actions" style="margin:0"><button class="secondary" id="quit">Завершить</button><button class="primary hidden" id="next">Следующий вопрос →</button></div></div></div></section>
+<section id="results" class="panel hidden" style="margin:28px 0 60px"><div class="result"><div class="eyebrow">MISSION REPORT</div><div class="ring"><b id="finalScore">0%</b></div><h2 class="title" id="resultTitle">Тест завершён</h2><p class="sub" id="resultText"></p><div class="stats" style="max-width:600px;margin:24px auto"><div class="stat"><b id="correctCount">0</b><span>правильных ответов</span></div><div class="stat"><b id="wrongCount">0</b><span>ошибок</span></div><div class="stat"><b id="totalCount">0</b><span>всего вопросов</span></div></div><div class="actions" style="justify-content:center"><button class="primary" id="restart">↻ Пройти ещё раз</button><button class="secondary" id="reviewToggle">Посмотреть ответы</button></div><div class="review hidden" id="review"></div></div></section><footer><span>BLOCKCHAIN SECURITY LAB <span class="pink">/ QUIZ MODULE</span></span><span>Обучение · Не является аудитом реального контракта</span></footer></div>
+<script>
+const questions=[
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Зачем в блокчейне нужны хеши?",
+  "a": [
+   "Чтобы связать данные и замечать изменения",
+   "Чтобы скрыть все транзакции навсегда",
+   "Чтобы отменять уже подтверждённые платежи в любой ситуации",
+   "Чтобы автоматически восстанавливать ключи"
+  ],
+  "ok": 0,
+  "e": "Хеш служит цифровым отпечатком: изменение данных меняет результат."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Что делает смарт-контракт?",
+  "a": [
+   "Хранит все пароли пользователей на сервере в любой ситуации",
+   "Выполняет запрограммированные правила сделки",
+   "Гарантирует прибыль для каждого владельца",
+   "Заменяет любые проверки прав на операции"
+  ],
+  "ok": 1,
+  "e": "Смарт-контракт автоматически исполняет записанные в коде правила."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Что в реальности означает атака 51%?",
+  "a": [
+   "Получение доступа к любому приватному ключу",
+   "Возможность создать деньги из любого токена",
+   "Преобладание в ресурсе консенсуса сети",
+   "Автоматическое отключение всех кошельков"
+  ],
+  "ok": 2,
+  "e": "В некоторых сетях атакующий способен реорганизовать блоки, но не получить произвольные ключи."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Чем опасен reentrancy?",
+  "a": [
+   "Повторным выводом до обновления баланса",
+   "Снижением скорости открытия сайта",
+   "Задержкой создания нового аккаунта",
+   "Ошибкой в названии токена на экране в любой ситуации"
+  ],
+  "ok": 0,
+  "e": "Повторный вход позволяет вновь вызвать уязвимую функцию до изменения состояния."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Что лучше сделать до внешнего вызова из контракта?",
+  "a": [
+   "Отправить секретную фразу администратору",
+   "Отключить проверки прав на время вызова",
+   "Удалить историю транзакций пользователя",
+   "Проверить условия и обновить баланс"
+  ],
+  "ok": 3,
+  "e": "Так работает идея Checks–Effects–Interactions."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "В чём суть ошибки контроля доступа?",
+  "a": [
+   "Комиссия за транзакцию выросла",
+   "Посторонний получает лишние права",
+   "На сайте слишком длинный адрес",
+   "У пользователя истёк сеанс браузера"
+  ],
+  "ok": 1,
+  "e": "Критичные функции должны выполнять только уполномоченные роли."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Зачем нужна мультиподпись?",
+  "a": [
+   "Для бесплатного обмена любых токенов",
+   "Для автоматического возврата всех комиссий в любой ситуации",
+   "Для одобрения операции несколькими ключами",
+   "Для полной анонимности администраторов"
+  ],
+  "ok": 2,
+  "e": "Мультиподпись требует согласования нескольких владельцев ключей."
+ },
+ {
+  "c": "audit",
+  "name": "Основы и атаки",
+  "q": "Что показал взлом Bybit в 2025 году?",
+  "a": [
+   "Важна независимая проверка подписываемого",
+   "Любая мультиподпись взламывает блокчейн",
+   "Любую seed-фразу можно вычислить по адресу",
+   "Все атаки возникают только в смарт-контракте"
+  ],
+  "ok": 0,
+  "e": "Злоумышленники подменили содержание операции в скомпрометированном интерфейсе Safe."
+ },
+ {
+  "c": "defi",
+  "name": "Безопасность DeFi",
+  "q": "Что такое DeFi?",
+  "a": [
+   "Государственная база цифровых паспортов",
+   "Система майнинга только для смартфонов",
+   "Формат зашифрованного резервного архива",
+   "Финансовые сервисы на смарт-контрактах"
+  ],
+  "ok": 3,
+  "e": "DeFi включает обмен, кредитование и другие финансовые операции на контрактах."
+ },
+ {
+  "c": "defi",
+  "name": "Безопасность DeFi",
+  "q": "Что такое оракул в DeFi?",
+  "a": [
+   "Сервис, передающий внешние данные в контракт",
+   "Секретная фраза для доступа к кошельку",
+   "Специальная программа для создания блоков в любой ситуации",
+   "Метод отмены подтверждённой транзакции"
+  ],
+  "ok": 0,
+  "e": "Оракулы передают внешнюю информацию, в частности цены."
+ },
+ {
+  "c": "defi",
+  "name": "Безопасность DeFi",
+  "q": "Как может навредить неверная цена залога?",
+  "a": [
+   "Изменится только внешний вид приложения",
+   "Сеть перестанет проверять цифровые подписи",
+   "Протокол выдаст слишком большой кредит",
+   "Кошелёк сменит свой приватный ключ"
+  ],
+  "ok": 2,
+  "e": "Кредитный протокол может переоценить обеспечение и выдать лишние средства."
+ },
+ {
+  "c": "defi",
+  "name": "Безопасность DeFi",
+  "q": "Что делает sandwich-атака?",
+  "a": [
+   "Создаёт новую монету без разрешения сети в любой ситуации",
+   "Ставит сделки вокруг обмена пользователя",
+   "Подделывает аппаратный криптокошелёк",
+   "Заменяет цифровую подпись на пароль"
+  ],
+  "ok": 1,
+  "e": "Атакующий действует до и после обмена пользователя, часто ухудшая его цену."
+ },
+ {
+  "c": "defi",
+  "name": "Безопасность DeFi",
+  "q": "Что такое проскальзывание?",
+  "a": [
+   "Отклонение цены сделки от ожидаемой",
+   "Повторное использование одного пароля",
+   "Отключение узлов после обновления сети",
+   "Пропажа истории в блокчейн-обозревателе"
+  ],
+  "ok": 0,
+  "e": "Цена исполнения может отличаться от ожидаемой, особенно при низкой ликвидности."
+ },
+ {
+  "c": "defi",
+  "name": "Безопасность DeFi",
+  "q": "Зачем протоколу проверять обеспечение стейблкоина?",
+  "a": [
+   "Чтобы быстрее менять интерфейс кошелька",
+   "Чтобы отменить необходимость криптографии",
+   "Чтобы запретить передачу любых токенов",
+   "Чтобы оценивать поддержку привязки курса"
+  ],
+  "ok": 3,
+  "e": "Недостаточное обеспечение может подорвать привязку стоимости."
+ },
+ {
+  "c": "wallet",
+  "name": "Защита кошельков",
+  "q": "Что нельзя сообщать даже «поддержке кошелька»?",
+  "a": [
+   "Адрес общедоступного смарт-контракта",
+   "Назначение публичной транзакции",
+   "Seed-фразу для восстановления ключей",
+   "Название приложения на вашем телефоне"
+  ],
+  "ok": 2,
+  "e": "Seed-фраза позволяет восстановить доступ к активам."
+ },
+ {
+  "c": "wallet",
+  "name": "Защита кошельков",
+  "q": "Что лучше сделать при неожиданном запросе подписи?",
+  "a": [
+   "Проверить детали и не спешить подписывать",
+   "Передать seed-фразу для быстрой проверки",
+   "Разрешить все действия без просмотра суммы",
+   "Отключить подтверждение в настройках"
+  ],
+  "ok": 0,
+  "e": "Подпись может разрешить опасное действие; важно понимать, что вы подтверждаете."
+ },
+ {
+  "c": "wallet",
+  "name": "Защита кошельков",
+  "q": "Почему аппаратный кошелёк не всесилен?",
+  "a": [
+   "Он автоматически раскрывает любой приватный ключ",
+   "Владелец может подтвердить опасную операцию",
+   "Он работает только при отсутствии интернета",
+   "Он полностью исключает фишинг сайтов"
+  ],
+  "ok": 1,
+  "e": "Аппаратный кошелёк хранит ключ, но не заменяет внимательность владельца."
+ },
+ {
+  "c": "ton",
+  "name": "TON и мосты",
+  "q": "Для чего служит межсетевой мост?",
+  "a": [
+   "Для передачи активов или сообщений между сетями",
+   "Для увеличения мощности личного компьютера в любой ситуации",
+   "Для изменения алгоритма подписи кошелька",
+   "Для удаления транзакций из старых блоков"
+  ],
+  "ok": 0,
+  "e": "Мост связывает разные блокчейны, но требует проверки подтверждений."
+ },
+ {
+  "c": "ton",
+  "name": "TON и мосты",
+  "q": "Что такое Jetton?",
+  "a": [
+   "Новый вариант алгоритма Шора",
+   "Формат аппаратного устройства",
+   "Стандарт токенов в сети TON",
+   "Способ ускоренного майнинга"
+  ],
+  "ok": 2,
+  "e": "Jetton — стандарт взаимозаменяемых токенов TON."
+ },
+ {
+  "c": "ton",
+  "name": "TON и мосты",
+  "q": "Почему важно проверять отправителя Jetton-сообщения?",
+  "a": [
+   "Потому что адрес может меняться ежесекундно",
+   "Потому что название токена гарантирует подлинность",
+   "Потому что все сообщения обязательно зашифрованы",
+   "Потому что уведомление можно подделать"
+  ],
+  "ok": 3,
+  "e": "Проверяют настоящий Jetton-кошелёк и связь с доверенным master-контрактом."
+ },
+ {
+  "c": "ton",
+  "name": "TON и мосты",
+  "q": "Какой главный сбой был в случае TAC Bridge?",
+  "a": [
+   "Плохая читаемость интерфейса кошелька",
+   "Недостаточная проверка Jetton-кошелька",
+   "Криптостойкость хешей стала слишком низкой",
+   "Злоумышленник получил 51% сети TON"
+  ],
+  "ok": 1,
+  "e": "Секвенсор принимал поддельный кошелёк без должной проверки его кода."
+ },
+ {
+  "c": "ton",
+  "name": "TON и мосты",
+  "q": "Что доказывает оплату в Telegram Mini App?",
+  "a": [
+   "Появление галочки на кнопке клиента в любой ситуации",
+   "Скриншот, присланный пользователем",
+   "Проверенная транзакция нужного заказа",
+   "Сообщение пользователя в общем чате"
+  ],
+  "ok": 2,
+  "e": "Сервер должен проверить факт, сумму, токен и получателя на блокчейне."
+ },
+ {
+  "c": "ton",
+  "name": "TON и мосты",
+  "q": "Зачем защищаться от повторного зачёта перевода?",
+  "a": [
+   "Чтобы один платёж не оплатил два заказа",
+   "Чтобы увеличить доходность пользователя",
+   "Чтобы все транзакции стали анонимными",
+   "Чтобы проверить скорость работы браузера"
+  ],
+  "ok": 0,
+  "e": "Каждая подтверждённая операция должна учитываться один раз."
+ },
+ {
+  "c": "quantum",
+  "name": "Квантовая угроза",
+  "q": "Что потенциально угрожает ряду цифровых подписей?",
+  "a": [
+   "Изменение размера блоков в обозревателе",
+   "Алгоритм Шора на мощном квантовом ПК",
+   "Уменьшение яркости дисплея кошелька",
+   "Перемешивание транзакций в интерфейсе"
+  ],
+  "ok": 1,
+  "e": "Алгоритм Шора теоретически угрожает схемам на дискретном логарифмировании."
+ },
+ {
+  "c": "quantum",
+  "name": "Квантовая угроза",
+  "q": "Что из списка относится к постквантовой цифровой подписи?",
+  "a": [
+   "Flash loan",
+   "Jetton master",
+   "ML-DSA",
+   "MEV-бот"
+  ],
+  "ok": 2,
+  "e": "ML-DSA — алгоритм цифровой подписи; ML-KEM предназначен для установления ключа."
+ }
+];
+let deck=[],idx=0,score=0,log=[],locked=false,timerId=null,timeLeft=30;const $=id=>document.getElementById(id);document.querySelectorAll('#categories .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#categories .chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');category=b.dataset.cat});document.querySelectorAll('#modes .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#modes .chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');mode=b.dataset.mode});function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}function startQuiz(){clearInterval(timerId);deck=shuffle([...questions]).slice(0,25);idx=0;score=0;log=[];locked=false;$('setup').classList.add('hidden');$('results').classList.add('hidden');$('quiz').classList.remove('hidden');render();scrollTo({top:$('quiz').offsetTop-15,behavior:'smooth'})}
+function render(){clearInterval(timerId);locked=false;let q=deck[idx];q._order=shuffle([0,1,2,3]);$('qnum').textContent=`ВОПРОС ${String(idx+1).padStart(2,'0')} / ${deck.length}`;$('categoryName').textContent=q.name.toUpperCase();$('scorePill').textContent=`СЧЁТ: ${score}`;$('progressBar').style.width=`${idx/deck.length*100}%`;$('difficulty').textContent='SECURITY CHECK // '+String(idx+1).padStart(3,'0');$('question').textContent=q.q;$('feedback').className='feedback hidden';$('next').classList.add('hidden');$('hint').textContent='Выбери один правильный вариант. После ответа следующий вопрос откроется автоматически.';$('answers').innerHTML='';['A','B','C','D'].forEach((l,i)=>{let oi=q._order[i];let b=document.createElement('button');b.className='answer';b.innerHTML=`<span class="letter">${l}</span><span>${q.a[oi]}</span>`;b.onclick=()=>choose(oi);$('answers').appendChild(b)});timeLeft=30;$('timerPill').textContent=`⏱ ${timeLeft} сек`;$('timerPill').style.borderColor='var(--pink)';timerId=setInterval(()=>{timeLeft--;$('timerPill').textContent=`⏱ ${timeLeft} сек`;if(timeLeft<=0){clearInterval(timerId);if(!locked)choose(-1,true)}},1000)}
+function choose(choice,timeout=false){if(locked)return;locked=true;clearInterval(timerId);let q=deck[idx],correct=choice===q.ok;if(correct)score++;log.push({q,choice,correct});[...$('answers').children].forEach((b,i)=>{b.disabled=true;if(q._order[i]===q.ok)b.classList.add('correct');if(q._order[i]===choice&&choice!==q.ok)b.classList.add('wrong')});$('scorePill').textContent=`СЧЁТ: ${score}`;$('progressBar').style.width=`${(idx+1)/deck.length*100}%`;$('feedback').className='feedback '+(correct?'good':'bad');$('feedback').innerHTML=`<strong>${correct?'✓ Верно!':timeout?'⌛ Время вышло.':'✕ Неверно.'}</strong> ${timeout?'Время на ответ закончилось.': ''}<br><span class="muted">Правильный ответ: ${q.a[q.ok]}</span>`;$('hint').textContent='Следующий вопрос загружается автоматически…';$('next').classList.add('hidden');if(timeout){setTimeout(next,900)}else{setTimeout(next,1100)}}
+function next(){if(idx<deck.length-1){idx++;render()}else finish()}
+function finish(){clearInterval(timerId);$('quiz').classList.add('hidden');$('results').classList.remove('hidden');let total=log.length,correct=log.filter(x=>x.correct).length,pct=Math.round(correct/Math.max(1,total)*100);$('finalScore').textContent=pct+'%';$('correctCount').textContent=correct;$('wrongCount').textContent=total-correct;$('totalCount').textContent=total;$('resultTitle').textContent=pct>=85?'Уровень: SECURITY EXPERT':pct>=60?'Уровень: PROTOCOL ANALYST':'Уровень: ROOKIE';$('resultText').textContent=pct>=85?'Отличный результат. Ты уверенно ориентируешься в основных угрозах и методах защиты.':pct>=60?'Хорошая база. Разбери ошибки, особенно там, где смешиваются технические и логические риски.':'Это только начало. Изучи объяснения и попробуй пройти квиз ещё раз.';$('review').innerHTML=log.map((x,i)=>`<div class="review-item"><b>${i+1}. ${x.q.q}</b><span>${x.correct?'✓ Правильно':'✕ Неправильно'} · Правильный ответ: ${x.q.a[x.q.ok]}</span><p class="muted">${x.q.e}</p></div>`).join('');$('reviewToggle').textContent='Посмотреть ответы';$('review').classList.add('hidden');scrollTo({top:$('results').offsetTop-15,behavior:'smooth'})}$('start').onclick=startQuiz;$('next').onclick=next;$('quit').onclick=()=>{if(confirm('Завершить тест и показать результат?'))finish()};$('restart').onclick=()=>{$('results').classList.add('hidden');$('setup').classList.remove('hidden');scrollTo({top:$('setup').offsetTop-15,behavior:'smooth'})};$('reviewToggle').onclick=()=>{let r=$('review');r.classList.toggle('hidden');$('reviewToggle').textContent=r.classList.contains('hidden')?'Посмотреть ответы':'Скрыть ответы'};
+</script></body></html>
